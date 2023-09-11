@@ -1,9 +1,10 @@
-def check_age():
-    i = 0
-    while True: 
-        age = int(input("Enter age: "))
-        i += 1
-        if int(age) >= 1 and int(age) <= 100:
-            print('Your age is ' + str(age))
-            print('Number of attempts = ' +str(i))
-check_age()
+def binom_coeff(n,k):
+    multi_n_k = 1
+    for i in range(n-k+1, n+1):
+        multi_n_k *= i
+    multi_k = 1
+    for i in range(1,k+1):
+        multi_k *= i
+    return int(multi_n_k / multi_k)
+
+print("hello")
